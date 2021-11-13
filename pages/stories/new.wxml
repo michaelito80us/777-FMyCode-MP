@@ -1,0 +1,13 @@
+<!--pages/stories/new.wxml-->
+<view style="padding: 50rpx">
+  <view class="h1">NEW POST</view>
+  <form catchsubmit="formSubmit" >
+    <view class="title">Title:</view>
+    <input class="input" name="title" placeholder="FML title" value="{{story.title}}" />
+
+    <view class="title" style="padding-top: 40rpx">Description</view>
+    <textarea class="input" name="description" placeholder="FML description" value="{{story.details}}" />
+
+    <button style="margin: 30rpx 0" type="primary" formType="submit">Submit</button>
+  </form>
+</view>

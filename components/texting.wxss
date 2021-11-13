@@ -1,0 +1,12 @@
+/* components/text.wxss */
+
+.btn {
+  margin-left: auto;
+  margin-right: auto;
+  width:min-content;
+  margin-top: 40rpx;
+  color: black;
+  padding: 40rpx 80rpx;
+  border-radius: 8px;
+  
+}

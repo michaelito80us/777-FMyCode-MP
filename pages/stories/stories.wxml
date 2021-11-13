@@ -1,0 +1,27 @@
+<!--pages/stories/index.wxml-->
+<view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/{{meal}}.jpg)">
+  {{title}}
+</view>
+
+
+<texting wx:if="{{show}}" bind:changeTrue="makeFalse" quote="this is a component, will disapear when pressed" color="rgb(20, 210, 235)" />
+<texting wx:if="{{!show}}" bind:changeTrue="makeFalse" quote="instead, this will appear" color="rgb(219, 130, 130)" />
+<!-- 
+  texting -> is the name of the component, we define this in the app.JSON file
+  bind:changeTrue -> we are binding the function from the triggerEvent in the component
+  makeFalse -> is the JS function in the parent that we call when the componen sends the triggerEvent 
+  quote -> is the data that we are passing to the component. we have to define it in the component -> JS -> properties section
+  color -> i'm passing a second piece of data, i want the color setting to come from the parent, and we use inline CSS to set the color in the component
+ -->
+
+
+<view wx:for="{{stories}}" wx:for-item="story" class="card-product" wx:key="key" bindtap="editStory" data-index="{{index}}">
+  <view class="card-product-infos">
+    <view class="h2">{{story.title}}</view>
+    <view class="p">{{story.details}}</view>
+  </view>
+</view>
+
+<view wx:if="{{stories.length === 0}}" style="margin-top: 100rpx">Nothing to see here, come back later</view>
+
+

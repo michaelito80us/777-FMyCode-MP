@@ -1,0 +1,8 @@
+<!--components/text.wxml-->
+
+<view class="btn" bindtap="buttonTap" data-info="hello world" style="background-color: {{color}}">{{quote}}</view>
+
+<!-- 
+  1. we use in-line css to set the color that we received from the parent
+  2. data-info -> we are sending some data when we tap on the button in the from {info: "hello world"}
+ -->

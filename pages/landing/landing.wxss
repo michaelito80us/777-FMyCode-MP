@@ -1,0 +1,28 @@
+/* pages/landing/landing.wxss */
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 300rpx 0;
+}
+
+.banner .h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 2rpx 2rpx 6rpx rgba(0,0,0,0.2);
+  font-size: 64rpx;
+  font-weight: bold;
+}
+
+.banner .p {
+  font-size: 40rpx;
+  color: white;
+  opacity: .7;
+  text-shadow: 2rpx 2rpx 6rpx rgba(0,0,0,0.2);
+}
+
+.btn {
+  background-color: red;
+  color: white;
+  padding: 40rpx 80rpx;
+  border-radius: 8px;
+}

@@ -1,0 +1,8 @@
+<!--pages/landing/landing.wxml-->
+<view class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <view class="container">
+    <view class="h1">Le Wagon brings tech skills to creative people!</view>
+    <view class="p">Change your life and learn to code at one of our campuses around the world.</view>
+    <view bindtap="buttonClick" class="btn" url="/pages/stories/stories">Apply now</view>
+  </view>
+</view>
