@@ -21,10 +21,10 @@ Page({
       title: 'Added',
     })
     setTimeout(() => {
-      wx.navigateTo({
+      wx.switchTab({
         url: '/pages/stories/stories',
       })
-    }, 3000); 
+    }, 1000); 
   },
 
 
