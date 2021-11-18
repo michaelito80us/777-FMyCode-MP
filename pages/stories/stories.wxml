@@ -1,5 +1,5 @@
 <!--pages/stories/index.wxml-->
-<view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/{{meal}}.jpg)">
+<view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-dark-blue-beam-matte-upscale-gradient-background-bluebeamscrubhigh-gradegradientbackgroundexhibition-board-image_86513.jpg)">
   {{title}}
 </view>
 
@@ -15,7 +15,7 @@
  -->
 
 
-<view wx:for="{{stories}}" wx:for-item="story" class="card-product" wx:key="key" bindtap="editStory" data-index="{{index}}">
+<view wx:for="{{stories}}" wx:for-item="story" class="card-product" wx:key="key" bindtap="showStory" data-id="{{story.id}}">
   <view class="card-product-infos">
     <view class="h2">{{story.title}}</view>
     <view class="p">{{story.details}}</view>

@@ -14,12 +14,15 @@ App({
     })
   },
   globalData: {
+
     userInfo: null,
     stories: [
       {
+        id: 1,
         title: 'fake fire drills',
         details: 'they made us go up and down without purpose. just wasted our time'
       },{
+        id: 2,
         title: 'class on saturdays',
         details: 'WTF!!'
       }

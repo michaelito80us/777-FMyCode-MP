@@ -1,6 +1,6 @@
 /* pages/stories/index.wxss */
 .card-category {
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center;
   height: 200rpx;
   display: flex;
@@ -10,7 +10,7 @@
   font-size: 48rpx;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  /* border-radius: 5px; */
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
@@ -18,14 +18,18 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   display: flex;
   align-items: center;
   width: 90%;
-  margin-left: auto;
+  margin: 30rpx auto;
+  /* margin-left: auto;
   margin-right:auto;
-  margin-top: 30rpx;
+  margin-top: 30rpx; */
+  border-radius: 40rpx;
 }
+
+
 
 .card-product .h2 {
   font-size: 16px;

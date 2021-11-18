@@ -5,29 +5,30 @@
     "pages/stories/new",
     "pages/stories/edit",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/stories/show"
   ],
   "usingComponents": {
     "texting": "/components/texting"
   },
-
   "tabBar": {
-    "color": "black",
-    "selectedColor": "#000000",
-    "backgroundColor": "grey",
-    "list": [{
-      "pagePath": "pages/stories/stories",
-      "text": "stories"
-    }, {
-      "pagePath": "pages/stories/new",
-      "text": "New/edit"
-    }]
+    "color": "#B2B2B2",
+    "selectedColor": "#7B1729",
+    "list": [
+      {
+        "pagePath": "pages/stories/stories",
+        "text": "STORIES"
+      },
+      {
+        "pagePath": "pages/stories/new",
+        "text": "NEW POST"
+      }
+    ]
   },
-
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "Fxxk My Code!",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",

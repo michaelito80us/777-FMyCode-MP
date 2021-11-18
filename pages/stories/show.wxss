@@ -1,0 +1,16 @@
+/* pages/stories/show.wxss */
+.title{
+  font-size: x-large;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+.details{
+  margin-top: 30rpx;
+}
+
+.btn{
+  border-radius: 12rpx;
+  border: 1px solid rgb(83, 83, 83);
+  padding: 10rpx  20rpx;
+}

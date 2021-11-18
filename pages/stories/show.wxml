@@ -1,0 +1,11 @@
+<!--pages/stories/show.wxml-->
+<view style="padding: 40rpx; color: rgb(55,55,55)">
+  <view class="title">{{title}}</view>
+
+  <view class="details">{{details}}</view>
+
+  <view style="display: flex; justify-content: space-evenly; margin-top: 80rpx">
+    <view class="btn" bindtap="editStory">EDIT</view>
+    <view class="btn" bindtap="deleteStory">DELETE</view>
+  </view>
+</view>
