@@ -4,8 +4,6 @@
     "pages/stories/stories",
     "pages/stories/new",
     "pages/stories/edit",
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/stories/show"
   ],
   "usingComponents": {

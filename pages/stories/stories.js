@@ -1,5 +1,6 @@
 // pages/stories/index.js
 const app = getApp()
+const url = app.globalData.host[app.globalData.env]
 
 Page({
 
@@ -20,11 +21,15 @@ Page({
 
   showStory(e){
 
+    // console.log('event', e)
+
     let id = e.currentTarget.dataset.id
-    console.log({id})
+
+    
+    // console.log({id})
 
     wx.navigateTo({
-      url: `/pages/stories/show?id=${id}`,
+      url: `/pages/stories/show?anything=${id}`,
     })
   },
 
@@ -63,8 +68,24 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-    let  stories = app.globalData.stories
-    this.setData({stories})
+    // let  stories = app.globalData.stories
+    // this.setData({stories})
+    const page = this
+
+    console.log({url})
+    wx.showLoading({
+      title: 'Loading',
+    })
+    wx.request({
+      url: `${url}/stories`,
+      method: 'GET',
+      success(res){
+        console.log({res})
+        page.setData({stories: res.data.stories})
+        wx.hideLoading()
+      }
+    })
+
   },
 
   /**

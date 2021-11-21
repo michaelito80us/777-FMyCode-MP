@@ -1,6 +1,8 @@
 // pages/stories/edit.js
 const app = getApp()
 const data = app.globalData
+const url = app.globalData.host[app.globalData.env]
+
 Page({
 
   /**
@@ -12,14 +14,22 @@ Page({
 
   formSubmit(e){
     // console.log(e)
-    let index = this.data.index
     let title = e.detail.value.title
-    let details = e.detail.value.description
-    data.stories[index] = {title: title, details: details}
-    
-    // debugger
-    wx.showToast({
-      title: 'Added',
+    let details = e.detail.value.details
+    let id = this.data.id
+    // data.stories.push({title: title, details: details})
+    wx.request({
+      url: `${url}/stories/${id}`,
+      method: 'PUT',
+      data: {title: title, details: details},
+      success(res) {
+        console.log ('res from update', res)
+      }
+    })
+  
+  // debugger
+  wx.showToast({
+    title: 'Added',
     })
     setTimeout(() => {
       wx.switchTab({
@@ -28,14 +38,19 @@ Page({
     }, 1000); 
   },
 
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    let index = options.index 
-    this.setData({index})
-    let story = data.stories[index]
-    this.setData({story})
+    const page = this
+    console.log('options for edit', options)
+
+    page.setData({
+      title: options.title, 
+      details: options.details, 
+      id: options.id})
+
   },
 
   /**

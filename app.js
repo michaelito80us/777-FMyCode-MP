@@ -16,6 +16,16 @@ App({
   globalData: {
 
     userInfo: null,
+    env: 'dev',
+    // env: 'prod',
+    // env: 'stag',
+
+    host: {
+      dev: 'http://localhost:3000/api/v1',
+      stag: '',
+      prod: '#'
+    },
+
     stories: [
       {
         id: 1,

@@ -1,6 +1,8 @@
 // pages/stories/new.js
 const app = getApp()
 const data = app.globalData
+const url = app.globalData.host[app.globalData.env]
+
 
 Page({
 
@@ -14,11 +16,20 @@ Page({
   formSubmit(e){
     // console.log(e)
     let title = e.detail.value.title
-    let details = e.detail.value.description
-    data.stories.push({title: title, details: details})
-    // debugger
-    wx.showToast({
-      title: 'Added',
+    let details = e.detail.value.details
+    // data.stories.push({title: title, details: details})
+    wx.request({
+      url: `${url}/stories`,
+      method: 'POST',
+      data: {title: title, details: details},
+      success(res) {
+        console.log ({res})
+      }
+    })
+  
+  // debugger
+  wx.showToast({
+    title: 'Added',
     })
     setTimeout(() => {
       wx.switchTab({

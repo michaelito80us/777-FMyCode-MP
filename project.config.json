@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -43,7 +43,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.20.1",
   "appid": "wx56fcf7c43e33f01c",
-  "projectname": "FmyCode777",
+  "projectname": "777-FMyCode-MP",
   "debugOptions": {
     "hidedInDevtools": []
   },
